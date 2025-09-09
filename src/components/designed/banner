@@ -1,0 +1,55 @@
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+export default function Banner() {
+  const slides = [
+    {
+      id: 1,
+      src: "/montreal-map.png",
+      
+    },
+    {
+      id: 2,
+      src: "/indonesia-map.png",
+      
+    },
+    {
+      id: 3,
+      src: "/indonesia-map.png",
+    
+    },
+  ]
+  
+
+  return (
+    <section className="relative w-full bg-gray-100  overflow-hidden">
+      <Carousel className="w-full max-w-7xl mx-auto"
+       plugins={[Autoplay({ delay: 3000 })]}>
+        <CarouselContent>
+          {slides.map((slide) => (
+            <CarouselItem key={slide.id} className="relative">
+              <img
+                src={slide.src}
+              
+                className="w-full h-[35vh] object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <h2 className="text-white text-3xl md:text-5xl font-bold text-center">
+               
+                </h2>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </section>
+  )
+}

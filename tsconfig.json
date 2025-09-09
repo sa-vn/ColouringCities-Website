@@ -1,0 +1,46 @@
+{
+   "compilerOptions": {
+    "resolveJsonModule": true,   // allow importing .jso
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "target": "ES2020",
+    "module": "ESNext",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  
+  },
+  //   "compilerOptions": {
+  //   "target": "ES2019",
+  //   "module": "CommonJS",
+  //   "resolveJsonModule": true,
+  //   "esModuleInterop": true,
+  //   "jsx": "react-jsx",
+  //   "skipLibCheck": true
+  // },
+  // "files": [],
+  // "references": [
+  //   { "path": "./tsconfig.app.json" },
+  //   { "path": "./tsconfig.node.json" }
+  // ]
+}
+// {
+//   "compilerOptions": {
+//     "target": "ES2019",
+//     "module": "CommonJS",
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "esModuleInterop": true,
+//     "jsx": "react-jsx",
+//     "skipLibCheck": true
+//   },
+//   "include": ["src", "render.tsx"],
+//   "exclude": ["node_modules", "dist"]
+// }
