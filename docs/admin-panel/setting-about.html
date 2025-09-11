@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings-About (Blueprint)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+    }
+    .sidebar {
+      width: 180px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      padding: 15px;
+    }
+    .sidebar h2 {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #3498db;
+      font-size: 12px;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    h1 { font-size: 16px; margin-bottom: 15px; }
+    h2 { font-size: 14px; margin-bottom: 10px; }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 6px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+    textarea { height: 80px; }
+    button {
+      padding: 5px 12px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      color: white;
+      font-size: 11px;
+    }
+    .btn-save { background-color: #27ae60; }
+    .btn-cancel { background-color: #7f8c8d; }
+    .form-buttons { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Menu -->
+  <div class="sidebar">
+    <h2>Settings Menu</h2>
+    <ul>
+      <li><a href="setting-about.html">About</a></li>
+      <li><a href="setting-researchers.html">Researchers</a></li>
+      <li><a href="setting-partners.html">Partners</a></li>
+      <li><a href="setting-banner.html">Banners</a></li>
+      <li><a href="set.html">Contacts</a></li>
+    </ul>
+  </div>
+
+  <!-- Content Area -->
+  <div class="content">
+    <h1>Settings Module - About</h1>
+    <div class="card">
+      <h2>Edit About Page</h2>
+      <form>
+        <label>Title</label>
+        <input type="text" placeholder="About CCRP" disabled>
+
+        <label>Main Information</label>
+        <textarea placeholder="Mission, vision, and project details..." disabled></textarea>
+
+        <div class="form-buttons">
+          <button type="button" class="btn-save">Save</button>
+          <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

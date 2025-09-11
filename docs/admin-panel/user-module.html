@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users(Blueprint)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+    }
+    .sidebar {
+      width: 180px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      padding: 15px;
+    }
+    .sidebar h2 {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #3498db;
+      font-size: 12px;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    h1 { font-size: 16px; margin-bottom: 15px; }
+    h2 { font-size: 14px; margin-bottom: 10px; }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+    th, td {
+      padding: 6px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th { background-color: #f2f2f2; }
+    button {
+      padding: 4px 8px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      color: white;
+      font-size: 11px;
+    }
+    .btn-edit { background-color: #3498db; }
+    .btn-delete { background-color: #e74c3c; }
+    .btn-save { background-color: #27ae60; }
+    .btn-cancel { background-color: #7f8c8d; }
+    .btn-add { background-color: #2ecc71; margin-bottom: 8px; }
+    input, select {
+      width: 100%;
+      padding: 5px;
+      margin: 3px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+    .form-buttons { margin-top: 8px; }
+  </style>
+</head>
+<body>
+      <!-- Sidebar Menu -->
+  <div class="sidebar">
+    <h2>Admin Menu</h2>
+    <ul>
+      <li><a href="user-module.html">Users</a></li>
+      <li><a href="setting-about.html">Settings</a></li>
+      <li><a href="news-module.html">News</a></li>
+      <li><a href="sataus-module.html"><b>Status</b></a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h1>Users Module (Blueprint)</h1>
+
+    <!-- User List -->
+    <div class="card">
+      <h2>User List</h2>
+      <button class="btn-add">+ Add New User</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>john.doe</td>
+            <td>john@example.com</td>
+            <td>Editor</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>jane.smith</td>
+            <td>jane@example.com</td>
+            <td>Viewer</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add User Form -->
+    <div class="card">
+      <h2>Add User</h2>
+      <form>
+        <label>Username</label>
+        <input type="text" placeholder="Enterrrrrr username" disabled>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" disabled>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" disabled>
+
+        <label>Role</label>
+        <select disabled>
+          <option>Super Admin</option>
+          <option>Editor</option>
+          <option>Viewer</option>
+        </select>
+
+        <div class="form-buttons">
+          <button type="button" class="btn-save">Save</button>
+          <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Roles Management -->
+    <div class="card">
+      <h2>Roles Management</h2>
+      <h3>Define Roles</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Role Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Super Admin</td>
+            <td>Full access to all modules</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Editor</td>
+            <td>Manage news, banners, and data</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Assign Role to User</h3>
+      <form>
+        <label>Select User</label>
+        <select disabled>
+          <option>john.doe</option>
+          <option>jane.smith</option>
+        </select>
+
+        <label>Select Role</label>
+        <select disabled>
+          <option>Super Admin</option>
+          <option>Editor</option>
+          <option>Viewer</option>
+        </select>
+
+        <div class="form-buttons">
+          <button type="button" class="btn-save">Assign</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

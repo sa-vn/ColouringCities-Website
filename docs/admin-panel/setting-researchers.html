@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings-Researchers(Blueprint)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+    }
+    .sidebar {
+      width: 180px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      padding: 15px;
+    }
+    .sidebar h2 {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #3498db;
+      font-size: 12px;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    h1 { font-size: 16px; margin-bottom: 15px; }
+    h2 { font-size: 14px; margin-bottom: 10px; }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+    th, td {
+      padding: 6px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th { background-color: #f2f2f2; }
+    button {
+      padding: 4px 8px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      color: white;
+      font-size: 11px;
+    }
+    .btn-edit { background-color: #3498db; }
+    .btn-delete { background-color: #e74c3c; }
+    .btn-save { background-color: #27ae60; }
+    .btn-cancel { background-color: #7f8c8d; }
+    .btn-add { background-color: #2ecc71; margin-bottom: 8px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 5px;
+      margin: 3px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+    textarea { height: 50px; }
+    .search-filter {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .search-filter input {
+      flex: 1;
+    }
+    .form-buttons { margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Menu -->
+  <div class="sidebar">
+    <h2>Settings Menu</h2>
+    <ul>
+      <li><a href="setting-about.html">About</a></li>
+      <li><a href="setting-researchers.html"><b>Researchers</b></a></li>
+      <li><a href="setting-partners.html">Partners</a></li>
+      <li><a href="setting-banner.html">Banners</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+
+  <!-- Content Area -->
+  <div class="content">
+    <h1>Settings Module - Researchers</h1>
+
+    <!-- Researchers List -->
+    <div class="card">
+      <h2>Researchers List</h2>
+      <div class="search-filter">
+        <input type="text" placeholder="Search researchers..." disabled>
+        <button class="btn-add">+ Add Researcher</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[Image]</td>
+            <td>Dr. Jane Doe</td>
+            <td>Associate Professor</td>
+            <td>Urban Analytics</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>[Image]</td>
+            <td>Prof. John Smith</td>
+            <td>Research Scientist</td>
+            <td>Data Visualization</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add/Edit Researcher Form -->
+    <div class="card">
+      <h2>Add / Edit Researcher</h2>
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Full name" disabled>
+
+        <label>Title</label>
+        <input type="text" placeholder="Research title" disabled>
+
+        <label>Description</label>
+        <textarea placeholder="Research area, expertise..." disabled></textarea>
+
+        <label>Profile Image</label>
+        <input type="file" disabled>
+
+        <div class="form-buttons">
+          <button type="button" class="btn-save">Save</button>
+          <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
